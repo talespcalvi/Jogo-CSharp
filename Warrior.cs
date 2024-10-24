@@ -22,7 +22,7 @@ public class Warrior
         int finalDamage = Math.Max(damage - Defense, 0);
         Health -= finalDamage;
         DamageTook = finalDamage;
-        Console.WriteLine($"{Name} recebeu {finalDamage} de dano. Vida restante: {Vida}");
+        Console.WriteLine($"{Name} recebeu {finalDamage} de dano. Vida restante: {Health}");
     }
 
     public virtual void ToAttack(Warrior target)
