@@ -1,5 +1,5 @@
 using System;
-
+// Classe base Guerreiro.
 public class Warrior
 {
     public string Name { get; set; }
@@ -17,7 +17,7 @@ public class Warrior
         DamageTook = 0;
     }
 
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage) // Método para receber dano.
     {
         int finalDamage = Math.Max(damage - Defense, 0);
         Health -= finalDamage;
@@ -26,11 +26,11 @@ public class Warrior
         Console.WriteLine($"{Name} recebeu {finalDamage} de dano. Vida restante: {Health}");
     }
 
-    public virtual void ToAttack(Warrior target)
+    public virtual void ToAttack(Warrior target) // Método para atacar o inimigo.
     {
         Console.WriteLine($"{Name} ataca {target.Name} com {Attack} de poder.");
         target.TakeDamage(Attack);
     }
 
-    public virtual bool BeAlive() => Health > 0;
+    public virtual bool BeAlive() => Health > 0; // Método para verificar se o warrior está vivo ou morto.
 }
