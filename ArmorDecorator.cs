@@ -1,5 +1,5 @@
 using System;
-
+// Classe decorator para Armadura.
 public class ArmorDecorator : WarriorDecorator
 {
     public ArmorDecorator(Warrior warrior) : base(warrior)
